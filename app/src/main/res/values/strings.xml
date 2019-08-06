@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">TRAYS_FoodApp</string>
 
+    <string name="app_name">TRAYS</string>
     <string name="srartBtn">GET START</string>
     <string name="signup">Sign Up</string>
 
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="login">Sign In</string>
+    <string name="username">user name</string>
+
+
 
 
 </resources>
