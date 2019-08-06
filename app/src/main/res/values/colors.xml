@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     
     <color name="startBtn">#FA6C0E</color>
+    <color name="SignIn">#0D0B0B</color>
+    <color name="SigninRounedeShapes">#ffffff</color>
 </resources>
