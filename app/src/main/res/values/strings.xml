@@ -13,12 +13,13 @@
     <string name="customer_telephone">Telephone</string>
     <string name="customer_password">Password</string>
     <string name="user_signupBtn">Sign Up</string>
-    <string name="password">password</string>
-    <string name="loginbtn">Log In</string>
-    <string name="emil">email</string>
-    <string name="deleteBtn">Delete</string>
 
-    <string name="shopname">Shop name</string>
-    <string name="shopaddress">shopAddress</string>
-    <string name="open">Open or Close</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="shop_email">Email</string>
+    <string name="shop_location">Location</string>
+    <string name="shop_telephone">Telephone</string>
+    <string name="shop_password">Password</string>
+    <string name="shop_signupBtn">Sign Up</string>
+
+
 </resources>
