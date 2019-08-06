@@ -17,20 +17,29 @@
       android:id="@+id/editText"
       android:layout_width="283dp"
       android:layout_height="96dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:background="@drawable/rounded_shape"
       android:ems="10"
       android:inputType="textPersonName"
       android:text="Name"
       android:textAlignment="center"
       android:textSize="24sp"
-      tools:layout_editor_absoluteX="64dp"
-      tools:layout_editor_absoluteY="373dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
 
   <ImageView
       android:id="@+id/imageView"
       android:layout_width="73dp"
       android:layout_height="30dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="312dp"
+      android:layout_marginEnd="8dp"
       android:background="@drawable/username"
-      tools:layout_editor_absoluteX="76dp"
-      tools:layout_editor_absoluteY="403dp" />
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.391"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
