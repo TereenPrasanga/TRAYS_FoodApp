@@ -9,4 +9,7 @@
     <color name="Home">#ffffff</color>
     <color name="HomeTxt">#ff8a23</color>
     <color name="SigninRounedeShapes">#ffffff</color>
+    <color name="dark_white"> #e6e6e6</color>
+    <color name="red_deleteBtn">#ff3300</color>
+    <color name="light_orange">#ffb84d</color>
 </resources>

@@ -1,13 +1,14 @@
 <resources>
+    <string name="app_name">TRAYS_FoodApp</string>
 
-    <string name="app_name">TRAYS</string>
     <string name="srartBtn">GET START</string>
-    <string name="signup">Sign Up</string>
-
     <string name="login">Sign In</string>
     <string name="username">user name</string>
+    <string name="signup">Sign Up</string>
+    <string name="password">password</string>
 
-
-
+    <string name="loginbtn">Log In</string>
+    <string name="emil">email</string>
+    <string name="deleteBtn">Delete</string>
 
 </resources>
