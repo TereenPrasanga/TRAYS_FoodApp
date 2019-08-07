@@ -31,5 +31,8 @@
     <string name="shop_password">Password</string>
     <string name="shop_signupBtn">Sign Up</string>
 
+    <string name="food_name">Food name</string>
+    <string name="food_price">Food price</string>
+    <string name="accept">Accept</string>
 
 </resources>
