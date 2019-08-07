@@ -35,5 +35,8 @@
     <string name="promotion_price">Price</string>
     <string name="promotion_orderbtn">Order</string>
 
+    <string name="food_name">Food name</string>
+    <string name="food_price">Food price</string>
+    <string name="accept">Accept</string>
 
 </resources>
