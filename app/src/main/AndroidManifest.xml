@@ -12,17 +12,21 @@
         <activity android:name=".shop_order_Accept_list" >
 
 
+
         </activity>
         <activity android:name=".shop_delete_list">
+
+        </activity>
+        <activity android:name=".RegisterdUserList" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".MainActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterdUserList" />
-        <activity android:name=".SignIn" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".shopView_list" />
         <activity android:name=".shop_register" />
         <activity android:name=".user_registration" />
