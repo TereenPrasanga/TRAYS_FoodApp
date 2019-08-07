@@ -59,6 +59,8 @@ public class shopView_list extends AppCompatActivity {
     }
 
 
+
+
     class Myadapter extends ArrayAdapter<String>
     {
         Context context;
