@@ -6,6 +6,8 @@
 
     <string name="login">Sign In</string>
     <string name="username">user name</string>
+    <string name="login_password">Password</string>
+    <string name="loginbtn">Log In</string>
 
     <string name="customer_name">Name</string>
     <string name="customer_email">Email</string>
@@ -14,8 +16,6 @@
     <string name="customer_password">Password</string>
     <string name="user_signupBtn">Sign Up</string>
 
-    <string name="password">password</string>
-    <string name="loginbtn">Log In</string>
     <string name="emil">email</string>
     <string name="deleteBtn">Delete</string>
 
@@ -30,6 +30,10 @@
     <string name="shop_telephone">Telephone</string>
     <string name="shop_password">Password</string>
     <string name="shop_signupBtn">Sign Up</string>
+    <string name="promotion_foodname">Food Name</string>
+    <string name="promotion_description">Description</string>
+    <string name="promotion_price">Price</string>
+    <string name="promotion_orderbtn">Order</string>
 
 
 </resources>

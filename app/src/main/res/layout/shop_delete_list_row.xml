@@ -83,7 +83,7 @@
             android:background="@drawable/low_rounded_shape"
             android:backgroundTint="@color/HomeTxt"
             android:text="@string/deleteBtn"
-            android:textColor="@color/black"
+            android:textColor="@color/Home"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

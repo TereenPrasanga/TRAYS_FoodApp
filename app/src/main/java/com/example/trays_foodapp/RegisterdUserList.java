@@ -22,6 +22,7 @@ public class RegisterdUserList extends AppCompatActivity {
     ListView listView;
     String muname[] ={"Nuwana Thilakasiri","Tereen Prasanga","Roshani Thamara","Kasun Kalhara","Kusal Mendus","Gihan Thilakerathna","Keshana Rajapaksha"};
     String memail[] = {"nuwana24@gmail.com","tereen1997@gmail.com","roshani@gmail.com","Kasun95@gmail.com","Kusul@yahoo.com","Gigan123@gmail.com","hasitha97@gmail.com"};
+    String mtelephone[] ={"0764567893","0712648367","0758726359","0784523097","0773640892","070248972","0777784357"};
     String mbutton[] = {"Delete","Delete","Delete","Delete","Delete","Delete","Delete"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class RegisterdUserList extends AppCompatActivity {
 
 
         listView = findViewById(R.id.registredUserList);
-        Myadapter adapter =new  Myadapter(this,muname,memail,mbutton);
+        Myadapter adapter =new  Myadapter(this,muname,memail,mbutton,mtelephone);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,16 +66,19 @@ public class RegisterdUserList extends AppCompatActivity {
         String runame[];
         String remail[];
         String rbutton[];
+        String rtelephone[];
 
 
 
-        Myadapter(Context c ,String uname[],String emial[],String button[])
+        Myadapter(Context c ,String uname[],String emial[],String button[],String telephone[])
         {
             super(c,R.layout.user_list_row,R.id.unameID,uname);
             this.context = c;
             this.runame = uname;
             this.remail = emial;
+            this.rtelephone = telephone;
             this.rbutton = button;
+
         }
 
         @NonNull
@@ -86,10 +90,13 @@ public class RegisterdUserList extends AppCompatActivity {
             View row = layoutInflater.inflate(R.layout.user_list_row,parent,false);
             TextView myuname = row.findViewById(R.id.unameID);
             TextView myemail = row.findViewById(R.id.emailID);
+            TextView mytelephone = row.findViewById(R.id.tpID);
             Button mybutton = row.findViewById(R.id.deleteBtnID);
+
 
             myuname.setText(runame[position]);
             myemail.setText(remail[position]);
+            mytelephone.setText(rtelephone[position]);
             mybutton.setText(rbutton[position]);
 
             return row;
