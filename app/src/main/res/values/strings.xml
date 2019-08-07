@@ -37,6 +37,8 @@
 
     <string name="food_name">Food name</string>
     <string name="food_price">Food price</string>
+    <string name="food_description">Food Descrition</string>
     <string name="accept">Accept</string>
+    <string name="order">Order Now</string>
 
 </resources>
