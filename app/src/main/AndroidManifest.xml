@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shop_delete_list">
-
+        <activity android:name=".promotion_list">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +18,13 @@
         </activity>
         <activity android:name=".RegisterdUserList"></activity>
         <activity android:name=".SignIn" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".shopView_list" />
         <activity android:name=".shop_register"></activity>
         <activity android:name=".user_registration"></activity>
+        <activity android:name=".shop_delete_list">
+
+        </activity>
     </application>
 
 </manifest>
