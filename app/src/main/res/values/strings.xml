@@ -41,4 +41,12 @@
     <string name="accept">Accept</string>
     <string name="order">Order Now</string>
 
+    <string name="Vieworder"> View Orders</string>
+    <string name="AddFood"> Add Foods</string>
+    <string name="AddShopes">Add Shops</string>
+    <string name="RemoveUsers">Remove Users</string>
+    <string name="RemoveShops">Remove Shops</string>
+    <string name="logout">Log out</string>
+    <string name="edit_profile">Edit profile</string>
+
 </resources>
