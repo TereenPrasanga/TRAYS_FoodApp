@@ -67,14 +67,18 @@
 
         <Button
             android:id="@+id/promo_orderbtn"
-            android:layout_width="216dp"
-            android:layout_height="37dp"
+            android:layout_width="215dp"
+            android:layout_height="43dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/low_rounded_shape"
+            android:backgroundTint="@color/HomeTxt"
             android:text="@string/promotion_orderbtn"
+            android:textColor="@color/Home"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/promo_price" />
 
