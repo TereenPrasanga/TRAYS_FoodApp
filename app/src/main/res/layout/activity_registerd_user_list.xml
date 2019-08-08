@@ -11,8 +11,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/registredUserList"
-        android:background="@drawable/defaultback">
+        android:id="@+id/registredUserList">
 
     </ListView>
 

@@ -22,8 +22,8 @@
     <string name="shopname">Shop name</string>
     <string name="shopaddress">shopAddress</string>
     <string name="open">Open or Close</string>
-
-
+    <string name="add_shop">Add Shop</string>
+    <string name="add">Add</string>
     <string name="shop_name">Shop Name</string>
     <string name="shop_email">Email</string>
     <string name="shop_location">Location</string>
@@ -40,5 +40,16 @@
     <string name="food_description">Food Descrition</string>
     <string name="accept">Accept</string>
     <string name="order">Order Now</string>
+    <string name="add_item">Add Item</string>
+    <string name="add_promotion_item">Add Promotion Item</string>
+    <string name="add_image">Add Image</string>
+    <string name="view_orders">View Orders</string>
+    <string name="add_foods">Add Foods</string>
+    <string name="manage_foods">Manage Foods</string>
+    <string name="manage_shops">Manage Shops</string>
+    <string name="manage_users">Manage Users</string>
+    <string name="logout">Logout</string>
+    <string name="update">Update</string>
+    <string name="Edit">Edit</string>
 
 </resources>

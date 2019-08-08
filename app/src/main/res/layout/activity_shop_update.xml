@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".shop_register"
+    tools:context=".shop_update"
     android:background="@drawable/shopreg">
-
 
     <TextView
         android:id="@+id/textView"
@@ -118,11 +117,10 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/rounded_btn"
         android:backgroundTint="@color/startBtn"
-        android:text="@string/shop_signupBtn"
+        android:text="@string/update"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </android.support.constraint.ConstraintLayout>
