@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shops"
+    android:background="@drawable/defaultback">
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="219dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/low_rounded_shape"
+        android:backgroundTint="@color/HomeTxt"
+        android:text="@string/Vieworder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/low_rounded_shape"
+        android:backgroundTint="@color/HomeTxt"
+        android:text="@string/edit_profile"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/low_rounded_shape"
+        android:backgroundTint="@color/HomeTxt"
+        android:text="@string/logout"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

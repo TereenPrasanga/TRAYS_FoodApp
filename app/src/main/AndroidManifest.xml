@@ -4,33 +4,27 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/app_logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shop_update"></activity>
-        <activity android:name=".promotion_update" />
-        <activity android:name=".food_update" />
-        <activity android:name=".user_update" />
-        <activity android:name=".manage_promotion_list">
+        <activity android:name=".promotion_list">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".add_promotion" />
-        <activity android:name=".add_item" />
-        <activity android:name=".promotion_list" />
-        <activity android:name=".home" />
-        <activity android:name=".RegisterdUserList" />
+        <activity android:name=".RegisterdUserList"></activity>
         <activity android:name=".SignIn" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".shopView_list" />
-        <activity android:name=".shop_register" />
-        <activity android:name=".user_registration" />
-        <activity android:name=".shop_delete_list" />
+        <activity android:name=".shop_register"></activity>
+        <activity android:name=".user_registration"></activity>
+        <activity android:name=".shop_delete_list">
+
+        </activity>
     </application>
 
 </manifest>
