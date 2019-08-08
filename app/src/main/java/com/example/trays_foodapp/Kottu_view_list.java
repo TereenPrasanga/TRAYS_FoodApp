@@ -58,6 +58,8 @@ class Adapter_kottu extends ArrayAdapter<String>
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+
         LayoutInflater layoutInflater = (LayoutInflater)context.getApplicationContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.kottu_list_row,parent,false);
         ImageView mykottu_image = row.findViewById(R.id.kottu_imageID);

@@ -60,4 +60,36 @@
     <string name="logout">Log out</string>
     <string name="edit_profile">Edit profile</string>
 
+
+    <string name="showdetails_name">Cheese Lovers + Pepper Chicken Pizza</string>
+    <string name="showdetails_price">LKR 900.99</string>
+    <string name="showdetails_INCRE">+</string>
+    <string name="showdetails_decre">-</string>
+    <string name="showdetails_value">7</string>
+    <string name="showdetails_tot">Total Price = 4589.99 LKR</string>
+    <string name="showdetails_ADDCART">Add to Cart</string>
+    <string name="showdetails_description">Pieces of devilled beef complemented by fresh capsicums, onions and a double layer of mozzarella cheese.A fiery mix of prawns, devilled fish, olives, bell peppers and onions with a double layer of mozzarella cheese.</string>
+
+    <string name="orders_list_customer">Add to Shop</string>
+
+    <string name="managefood_update">UPDATE</string>
+    <string name="managefood_delete">DELETE</string>
+    <string name="your_cart">Your Food cart</string>
+
+    <string name="cart_tot">Cart total</string>
+    <string name="cart_totval">LKR 2523.00</string>
+    <string name="tax">Tax</string>
+    <string name="taxval">LKR 100.00</string>
+    <string name="delivary">Delivery Charges</string>
+    <string name="delivaryval">LKR 00.00</string>
+    <string name="promodis">Promo discount</string>
+    <string name="promodisval">LKR 00.00</string>
+    <string name="Subtotal">Subtotal</string>
+    <string name="Subtotalval">LKR 2623.00</string>
+    <string name="processtocheck">Procced to Checkout</string>
+
+    <string name="ordernow">Order Now</string>
+    <string name="ordername">order name</string>
+    <string name="orderdes">order description</string>
+    <string name="ordersprice">order price</string>
 </resources>
