@@ -4,27 +4,51 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shop_delete_list">
 
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterdUserList"></activity>
-        <activity android:name=".SignIn" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".search_bar" android:parentActivityName=".home"/>
+        <activity android:name=".manage_promotion_list" android:parentActivityName=".admin">
 
         </activity>
-        <activity android:name=".shopView_list" />
-        <activity android:name=".shop_register"></activity>
-        <activity android:name=".user_registration"></activity>
+        <activity android:name=".promotion_update" android:parentActivityName=".manage_promotion_list"/>
+        <activity android:name=".shop_update" android:parentActivityName=".shops"/>
+        <activity android:name=".food_update" android:parentActivityName=".manage_view_foods_list"/>
+        <activity android:name=".shops" />
+        <activity android:name=".admin" />
+        <activity android:name=".shop_delete_list" android:parentActivityName=".admin"/>
+        <activity android:name=".promotion_list" android:parentActivityName=".home"/>
+        <activity android:name=".RegisterdUserList" android:parentActivityName=".admin"/>
+        <activity android:name=".SignIn" />
+        <activity android:name=".shopView_list" android:parentActivityName=".home"/>
+        <activity android:name=".shop_register" android:parentActivityName=".admin"/>
+        <activity android:name=".user_registration" />
+        <activity android:name=".shop_order_Accept_list" android:parentActivityName=".shops"/>
+        <activity android:name=".home" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".orders_customer_view_list" android:parentActivityName=".admin"/>
+        <activity android:name=".add_item" android:parentActivityName=".admin"/>
+        <activity android:name=".manage_view_foods_list" android:parentActivityName=".admin"/>
+        <activity android:name=".juice_view_list" android:parentActivityName=".home"/>
+        <activity android:name=".beforeCart_showdetailsOfFood"/>
+        <activity android:name=".cart_list"/>
+        <activity android:name=".Kottu_view_list" android:parentActivityName=".home"/>
+        <activity android:name=".pizza_view_list" android:parentActivityName=".home"/>
+        <activity android:name=".rice_view_list" android:parentActivityName=".home"/>
+        <activity android:name=".user_update" android:parentActivityName=".home"/>
+
+
+
     </application>
 
 </manifest>

@@ -67,6 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/juice_priceID" />
 
         <Button
+            android:id="@+id/juiceorder"
             android:layout_width="216dp"
             android:layout_height="50dp"
             android:layout_marginStart="130dp"

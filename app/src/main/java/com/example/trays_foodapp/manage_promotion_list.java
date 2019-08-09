@@ -1,6 +1,7 @@
 package com.example.trays_foodapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,11 +64,29 @@ class Adapter_managePromo extends ArrayAdapter<String >
         LayoutInflater layoutInflater = (LayoutInflater)context.getApplicationContext().getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.manage_promo_row,parent,false);
 
+
         TextView myfood_name = row.findViewById(R.id.promo_food_nameID);
         TextView myfood_price = row.findViewById(R.id.promo_food_priceID);
+        Button update = row.findViewById(R.id.promo_updateBtnID);
+        Button delete = row.findViewById(R.id.promo_deleteBtnID);
 
         myfood_name.setText(rfood_name[position]);
         myfood_price.setText(rfood_price[position]);
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),promotion_update.class);
+                context.startActivity(intent);
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return row;
     }

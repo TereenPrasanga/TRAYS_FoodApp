@@ -69,6 +69,7 @@
 
 
         <Button
+            android:id="@+id/pizzaorder"
             android:layout_width="216dp"
             android:layout_height="50dp"
             android:layout_marginStart="130dp"

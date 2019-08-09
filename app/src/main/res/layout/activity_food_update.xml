@@ -106,6 +106,7 @@
         android:layout_marginBottom="120dp"
         android:background="@drawable/rounded_btn"
         android:backgroundTint="@color/startBtn"
+        android:onClick="update"
         android:text="@string/update"
         android:textColor="@color/Home"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -9,9 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class cart_list extends AppCompatActivity {
@@ -34,6 +37,10 @@ public class cart_list extends AppCompatActivity {
 
 
 
+    }
+
+    public void checkout(View view) {
+        Toast.makeText(this, "Process Successful", Toast.LENGTH_SHORT).show();
     }
 }
 
@@ -63,10 +70,17 @@ class Adapter_cart extends ArrayAdapter<String>
         TextView myfood_name = row.findViewById(R.id.food_nameID);
         TextView myfood_price = row.findViewById(R.id.food_priceID);
         ImageView myfood_image = row.findViewById(R.id.cartfood_imageID);
-
+        ImageButton delete = row.findViewById(R.id.deletecart);
         myfood_name.setText(rfood_name[position]);
         myfood_price.setText(rfood_price[position]);
         myfood_image.setImageResource(rfood_image[position]);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return row;
     }
 }

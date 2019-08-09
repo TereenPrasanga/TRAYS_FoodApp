@@ -1,6 +1,7 @@
 package com.example.trays_foodapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -71,6 +73,16 @@ class Adapter_kottu extends ArrayAdapter<String>
         mykottu_name.setText(rkottu_name[position]);
         mykottu_price.setText(rkottu_price[position]);
         mykottu_description.setText(rkottu_description[position]);
+
+        Button order = row.findViewById(R.id.kottuorder);
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),beforeCart_showdetailsOfFood.class);
+                context.startActivity(intent);
+            }
+        });
+
 
         return row;
     }

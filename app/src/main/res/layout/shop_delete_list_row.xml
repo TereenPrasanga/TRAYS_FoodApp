@@ -74,7 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/emailID" />
 
         <Button
-            android:id="@+id/btnID"
+            android:id="@+id/shopdeleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"

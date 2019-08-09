@@ -72,6 +72,7 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="addtocart"
         android:text="@string/showdetails_ADDCART"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

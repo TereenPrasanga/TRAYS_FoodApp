@@ -38,7 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/promo_food_nameID" />
 
         <Button
-            android:id="@+id/promo_updateBtnID"
+            android:id="@+id/promo_deleteBtnID"
             android:layout_width="140dp"
             android:layout_height="45dp"
             android:layout_marginTop="4dp"
@@ -48,10 +48,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/promo_deleteBtnID" />
+            app:layout_constraintTop_toBottomOf="@+id/promo_updateBtnID" />
 
         <Button
-            android:id="@+id/promo_deleteBtnID"
+            android:id="@+id/promo_updateBtnID"
             android:layout_width="140dp"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"

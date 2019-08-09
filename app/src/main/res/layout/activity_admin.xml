@@ -10,19 +10,20 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="11dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="view_orders"
         android:text="@string/Vieworder"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +36,7 @@
         android:layout_marginEnd="11dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="add_foods"
         android:text="@string/AddFood"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -54,17 +56,19 @@
         android:layout_marginEnd="11dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="addshops"
         android:text="@string/AddShopes"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/managefoodupdate"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
@@ -72,12 +76,14 @@
         android:layout_marginEnd="11dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="removeshop"
         android:text="@string/RemoveShops"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -91,14 +97,16 @@
         android:layout_marginEnd="11dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
+        android:onClick="removeuser"
         android:text="@string/RemoveUsers"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/managefoodupdate" />
 
 
     <Button
@@ -108,18 +116,62 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="198dp"
         android:background="@drawable/low_rounded_shape"
         android:backgroundTint="@color/HomeTxt"
         android:text="@string/logout"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:onClick="logout"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/low_rounded_shape"
+        android:backgroundTint="@color/HomeTxt"
+        android:onClick="managefoods"
+        android:text="@string/manage_foods"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/low_rounded_shape"
+        android:backgroundTint="@color/HomeTxt"
+        android:onClick="managepromo"
+        android:text="@string/manage_promotions"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
 
 
 

@@ -1,6 +1,7 @@
 package com.example.trays_foodapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +9,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class orders_customer_view_list extends AppCompatActivity {
 
@@ -28,13 +33,13 @@ public class orders_customer_view_list extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_orders_customer_view_list);
-
+       setContentView(R.layout.activity_orders_customer_view_list);
         listView = findViewById(R.id.orderslistViewID);
-
         Adapter_orders adapter_orders = new Adapter_orders(this,morderimage,mordersname,mordersprice,mordercustomername,morderaddress,mmobile);
         listView.setAdapter(adapter_orders);
     }
+
+
 }
 
 class Adapter_orders extends ArrayAdapter<String>
@@ -72,6 +77,7 @@ class Adapter_orders extends ArrayAdapter<String>
         TextView myordercustomername = row.findViewById(R.id.order_customerID);
         TextView myorderaddress = row.findViewById(R.id.order_addressID);
         TextView mymobile = row.findViewById(R.id.order_mobileID);
+        Button mybutton = row.findViewById(R.id.addtoshopBtn);
 
         myorder_image.setImageResource(rorder_image[position]);
         myordersname.setText(rordersname[position]);
@@ -79,6 +85,12 @@ class Adapter_orders extends ArrayAdapter<String>
         myordercustomername.setText(rordercustomername[position]);
         myorderaddress.setText(rorderaddress[position]);
         mymobile.setText(rmobile[position]);
+        mybutton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Added successfully", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return row;
     }

@@ -42,7 +42,7 @@
 
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/managefoodupdate"
             android:layout_width="216dp"
             android:layout_height="50dp"
             android:layout_marginStart="130dp"
@@ -63,6 +63,7 @@
 
 
         <Button
+            android:id="@+id/managefooddelete"
             android:layout_width="216dp"
             android:layout_height="50dp"
             android:layout_marginStart="130dp"
@@ -78,7 +79,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintTop_toBottomOf="@+id/managefoodupdate" />
 
 
 

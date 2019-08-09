@@ -106,6 +106,7 @@
         android:layout_marginBottom="120dp"
         android:background="@drawable/rounded_btn"
         android:backgroundTint="@color/startBtn"
+        android:onClick="additems"
         android:text="@string/add_item"
         android:textColor="@color/Home"
         app:layout_constraintBottom_toBottomOf="parent"

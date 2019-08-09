@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/db" android:title="@string/dashboard" android:icon="@drawable/ic_outline_dashboard_24px"/>
+        <item android:id="@+id/promo" android:title="@string/promotion" android:icon="@drawable/ic_baseline_payment_24px"/>
+        <item android:id="@+id/shop" android:title="@string/shops" android:icon="@drawable/ic_baseline_school_24px"/>
+        <item android:id="@+id/search" android:title="@string/serach" android:icon="@drawable/ic_outline_search_24px"/>
+        <item android:id="@+id/profile" android:title="@string/profile" android:icon="@drawable/ic_baseline_account_circle_24px"/>
+        <item android:id="@+id/signout" android:title="@string/signout" android:icon="@drawable/ic_baseline_transit_enterexit_24px"/>
+
+
+    </group>
+
+</menu>

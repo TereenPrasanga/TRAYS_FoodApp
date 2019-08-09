@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,31 +37,6 @@ public class shop_order_Accept_list extends AppCompatActivity {
         listView = findViewById(R.id.Shop_order_listViewID);
         Myadapter1 myadapter = new Myadapter1(this,mfood_name,mfood_price,mcus_name,mcus_tp,mcus_address);
         listView.setAdapter(myadapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0)
-                {
-                    Toast.makeText(shop_order_Accept_list.this,"wf",Toast.LENGTH_SHORT).show();
-                }
-                if(position == 0)
-                {
-                    Toast.makeText(shop_order_Accept_list.this,"wf",Toast.LENGTH_SHORT).show();
-                }
-                if(position == 0)
-                {
-                    Toast.makeText(shop_order_Accept_list.this,"wf",Toast.LENGTH_SHORT).show();
-                }
-                if(position == 0)
-                {
-                    Toast.makeText(shop_order_Accept_list.this,"wf",Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
-
 
     }
 }
@@ -98,6 +74,7 @@ class Myadapter1  extends ArrayAdapter<String>
         TextView mycus_name = row.findViewById(R.id.cus_nameID);
         TextView mycus_address = row.findViewById(R.id.cus_addressID);
         TextView mycus_tp = row.findViewById(R.id.cus_tpID);
+        Button accept = row.findViewById(R.id.acceptBtn);
 
         myfood_name.setText(rfood_name[position]);
         myfood_price.setText(""+rfood_price[position]);
@@ -106,7 +83,12 @@ class Myadapter1  extends ArrayAdapter<String>
         mycus_tp.setText(rcus_tp[position]);
 
 
-
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Order Accepted", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 

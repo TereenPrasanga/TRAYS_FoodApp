@@ -1,6 +1,7 @@
 package com.example.trays_foodapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.ListViewAutoScrollHelper;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -77,6 +79,15 @@ class Myadapter extends ArrayAdapter<String>
         myname.setText(rname[position]);
         mydescription.setText(rdescription[position]);
         myprice.setText(rprice[position]);
+
+        Button order = row.findViewById(R.id.promo_orderbtn);
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),beforeCart_showdetailsOfFood.class);
+                context.startActivity(intent);
+            }
+        });
 
         return row;
     }

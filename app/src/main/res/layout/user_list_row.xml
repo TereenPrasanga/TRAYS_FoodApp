@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/unameID" />
 
         <Button
-            android:id="@+id/deleteBtnID"
+            android:id="@+id/userlistdeleteBtnID"
             android:layout_width="112dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
