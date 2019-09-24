@@ -34,7 +34,6 @@
         <activity
             android:name=".food_update"
             android:parentActivityName=".manage_view_foods_list" />
-        <activity android:name=".shops" />
         <activity android:name=".admin" />
         <activity
             android:name=".shop_delete_list"

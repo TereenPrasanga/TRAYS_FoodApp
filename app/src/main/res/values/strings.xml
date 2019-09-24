@@ -116,5 +116,6 @@
     <string name="close">close</string>
     <string name="shops">shops</string>
     <string name="delete">Delete</string>
+    <string name="search_shop">Search Shop name.....</string>
 
 </resources>

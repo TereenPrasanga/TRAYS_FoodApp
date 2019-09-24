@@ -31,13 +31,6 @@ public class SignIn extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Admin mode", Toast.LENGTH_SHORT).show();
 
     }
-    public void shopAdmin(View view)
-    {
-        Intent intent = new Intent(this,shops.class);
-        startActivity(intent);
 
-        Toast.makeText(getApplicationContext(),"Shop mode", Toast.LENGTH_SHORT).show();
-
-    }
 
 }

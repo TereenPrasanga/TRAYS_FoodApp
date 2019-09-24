@@ -19,37 +19,37 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/retriewShopImage"
+                android:id="@+id/SearchShopImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop">
 
             </ImageView>
             <TextView
-                android:id="@+id/retriewShopName"
+                android:id="@+id/SearchShopName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/retriewShopImage"
+                android:layout_below="@+id/SearchShopImage"
                 android:layout_margin="10dp"
                 android:textSize="16sp">
 
 
             </TextView>
             <TextView
-                android:id="@+id/retriewShopLocation"
+                android:id="@+id/SearchShopLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/retriewShopName"
+                android:layout_below="@+id/SearchShopName"
                 android:layout_margin="10dp"
                 android:textSize="16sp">
 
 
             </TextView>
             <TextView
-                android:id="@+id/retriewShoptelephone"
+                android:id="@+id/SearchShoptelephone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/retriewShopLocation"
+                android:layout_below="@+id/SearchShopLocation"
                 android:layout_margin="10dp"
                 android:textSize="16sp">
 
