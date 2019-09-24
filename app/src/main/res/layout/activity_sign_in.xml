@@ -16,7 +16,7 @@
   ]]>
 
   <EditText
-      android:id="@+id/editText2"
+      android:id="@+id/txtshopname"
       android:layout_width="290dp"
       android:layout_height="45dp"
       android:layout_marginStart="30dp"
@@ -67,10 +67,10 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.508"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editText2" />
+      app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
 
   <Button
-      android:id="@+id/button2"
+      android:id="@+id/btnsignUp"
       android:layout_width="108dp"
       android:layout_height="48dp"
       android:layout_marginStart="132dp"

@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtshopname"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtshoplocation"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -56,10 +56,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtshopemail"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -73,10 +73,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshoplocation" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtshopphone"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -90,10 +90,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshopemail" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/txtshoppassword"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -106,10 +106,10 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshopphone" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnsignUp"
         android:layout_width="105dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"

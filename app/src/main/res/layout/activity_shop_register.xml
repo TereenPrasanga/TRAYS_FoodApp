@@ -13,7 +13,7 @@
         android:layout_width="180dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="280dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:backgroundTint="@color/startBtn"
@@ -27,11 +27,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtshopname"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
@@ -39,15 +39,16 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageShop" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtshoplocation"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
@@ -55,16 +56,16 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtshopemail"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
@@ -72,58 +73,53 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshoplocation" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtshopphone"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
         android:hint="@string/shop_telephone"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_shape"
-        android:ems="10"
-        android:hint="@string/shop_password"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/txtshopemail" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnsignUpShop"
         android:layout_width="105dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/rounded_btn"
         android:backgroundTint="@color/startBtn"
-        android:onClick="signup"
         android:text="@string/shop_signupBtn"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageShop"
+        android:layout_width="107dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="152dp"
+        android:background="@drawable/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
 </android.support.constraint.ConstraintLayout>
