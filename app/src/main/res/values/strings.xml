@@ -48,8 +48,8 @@
     <string name="Vieworder"> View Orders</string>
     <string name="AddFood"> Add Foods</string>
     <string name="AddShopes">Add Shops</string>
-    <string name="RemoveUsers">Remove Users</string>
-    <string name="RemoveShops">Remove Shops</string>
+    <string name="RemoveUsers">Manage Users</string>
+    <string name="RemoveShops">Manage Shops</string>
     <string name="logout">Log out</string>
     <string name="edit_profile">Edit profile</string>
 
@@ -63,7 +63,7 @@
     <string name="showdetails_ADDCART">Add to Cart</string>
     <string name="showdetails_description">Pieces of devilled beef complemented by fresh capsicums, onions and a double layer of mozzarella cheese.A fiery mix of prawns, devilled fish, olives, bell peppers and onions with a double layer of mozzarella cheese.</string>
     <string name="add_item">Add Item</string>
-    <string name="add_promotion_item">Add Promotion Item</string>
+    <string name="add_promotion_item">Add Promotion</string>
     <string name="add_image">Add Image</string>
 
 

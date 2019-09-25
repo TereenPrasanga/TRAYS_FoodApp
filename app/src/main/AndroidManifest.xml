@@ -28,15 +28,16 @@
         <activity
             android:name=".promotion_update"
             android:parentActivityName=".manage_promotion_list" />
-        <activity
-            android:name=".shop_update"
-            android:parentActivityName=".shops" />
+
         <activity
             android:name=".food_update"
             android:parentActivityName=".manage_view_foods_list" />
         <activity android:name=".admin" />
         <activity
             android:name=".shop_delete_list"
+            android:parentActivityName=".admin" />
+        <activity
+            android:name=".add_promotion"
             android:parentActivityName=".admin" />
         <activity
             android:name=".promotion_list"
@@ -52,9 +53,7 @@
             android:name=".shop_register"
             android:parentActivityName=".admin" />
         <activity android:name=".user_registration" />
-        <activity
-            android:name=".shop_order_Accept_list"
-            android:parentActivityName=".shops" />
+
         <activity
             android:name=".home"
             android:theme="@style/AppTheme.NoActionBar" />
