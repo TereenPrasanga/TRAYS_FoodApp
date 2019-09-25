@@ -9,26 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PlaceAOrderFinalActivity"></activity>
-        <activity android:name=".SearchBarFoodActivity">
+        <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
-        <activity android:name=".AdminFoodsDeleteUpdateActivity"></activity>
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".search_bar"
             android:parentActivityName=".home" />
         <activity
             android:name=".manage_promotion_list"
-            android:parentActivityName=".admin" />
+            android:parentActivityName=".admin"></activity>
         <activity
             android:name=".promotion_update"
             android:parentActivityName=".manage_promotion_list" />
-        <activity android:name=".shop_update" />
+        <activity
+            android:name=".shop_update"
+            android:parentActivityName=".shops" />
         <activity
             android:name=".food_update"
             android:parentActivityName=".manage_view_foods_list" />
@@ -50,12 +52,12 @@
             android:name=".shop_register"
             android:parentActivityName=".admin" />
         <activity android:name=".user_registration" />
-        <!--
-<activity
+        <activity
             android:name=".shop_order_Accept_list"
             android:parentActivityName=".shops" />
         <activity
-        -->
+            android:name=".home"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".orders_customer_view_list"
             android:parentActivityName=".admin" />
