@@ -52,7 +52,7 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
-      android:id="@+id/editText"
+      android:id="@+id/uname"
       android:layout_width="290dp"
       android:layout_height="45dp"
       android:layout_marginStart="30dp"
@@ -84,10 +84,10 @@
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editText" />
+      app:layout_constraintTop_toBottomOf="@+id/uname" />
 
   <Button
-      android:id="@+id/button3"
+      android:id="@+id/b1"
       android:layout_width="122dp"
       android:layout_height="63dp"
       android:layout_marginStart="60dp"
@@ -115,9 +115,9 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/b1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3" />" />
+        app:layout_constraintStart_toEndOf="@+id/b1" />" />
 
 
 </android.support.constraint.ConstraintLayout>

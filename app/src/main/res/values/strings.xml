@@ -1,6 +1,5 @@
 <resources>
 
-
     <string name="app_name">TRAYS</string>
     <string name="srartBtn">GET START</string>
     <string name="signup">Sign Up</string>
@@ -115,7 +114,26 @@
     <string name="Open">Open</string>
     <string name="close">close</string>
     <string name="shops">shops</string>
-    <string name="delete">Delete</string>
-    <string name="search_shop">Search Shop name.....</string>
+    <string name="search_shop">Search Shop Name ....</string>
+
+    //
+
+
+    <string name="layout_foodname">Food Name</string>
+    <string name="layout_foodprice">LKR 160</string>
+
+    <string name="final_N">Cheeze Pizza - Crispy </string>
+    <string name="final_quantity">Quantity :</string>
+    <string name="final_Tot">Total Price :</string>
+    <string name="final_enter_username">Your Name :</string>
+    <string name="final_enter_username1"></string>
+    <string name="final_enter_contact">Contact No :</string>
+    <string name="final_enter_contact1"></string>
+    <string name="final_enter_placeAOredr">Place a Order</string>
+    <string name="final_enter_cancelOredr">Cancel a Order</string>
+    <string name="final_Q">7</string>
+    <string name="final_P">LKR 1200.00</string>
+
+
 
 </resources>
