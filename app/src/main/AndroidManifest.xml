@@ -9,37 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrdersViewFoodsActivity">
-
-
-
-
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-
-
+        <activity android:name=".admin_promo_delete_update_Activity">
 
         </activity>
-        <activity android:name=".FinalRicesActivity" />
-        <activity android:name=".FinalKottuActivity" >
-
+        <activity android:name=".Final_promo_Activity">
 
         </activity>
-        <activity android:name=".FinalDrinksActivity">
+        <activity android:name=".OrdersViewFoodsActivity" >
 
-        </activity>
-        <activity android:name=".FinalFoodsActivity">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+        </activity>
+        <activity android:name=".FinalRicesActivity" />
+        <activity android:name=".FinalKottuActivity" />
+        <activity android:name=".FinalDrinksActivity" />
+        <activity android:name=".FinalFoodsActivity" >
+
 
         </activity>
         <activity android:name=".MainActivity" />
@@ -87,7 +75,6 @@
 
 
 
-
         </activity>
         <activity
             android:name=".manage_view_foods_list"
@@ -102,34 +89,30 @@
             android:parentActivityName=".home" />
         <activity
             android:name=".pizza_view_list"
-            android:parentActivityName=".home" />
+            android:parentActivityName=".home" >
+
+
+        </activity>
         <activity
             android:name=".rice_view_list"
             android:parentActivityName=".home" />
         <activity
+            android:name=".add_promotion"
+            android:parentActivityName=".home">
+
+
+        </activity>
+        <activity
             android:name=".user_update"
             android:parentActivityName=".home" />
         <activity android:name=".PlaceAOrderFinalActivity" />
-        <activity android:name=".SearchBarFoodActivity">
+        <activity android:name=".SearchBarFoodActivity" >
 
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
 
         </activity>
-        <activity android:name=".AdminFoodsDeleteUpdateActivity" />
+        <activity android:name=".SearchbarPromotionActivity" />
+        <activity android:name=".AdminFoodsDeleteUpdateActivity"></activity>
     </application>
 
 </manifest>

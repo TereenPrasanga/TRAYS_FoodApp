@@ -137,16 +137,11 @@
 
     <string name="order_cusname">Customer_name</string>
     <string name="BuyNow">Buy Now</string>
-  <!--  <string name="BuyNow">Buy Now</string>
+    <!--  <string name="BuyNow">Buy Now</string>
     <string name="BuyNow">Buy Now</string>
     <string name="BuyNow">Buy Now</string>&ndash;&gt;-->
 
     <string name="SearchFoods">Search Foods Here...</string>
-
-
-
-
-
 
 
 </resources>

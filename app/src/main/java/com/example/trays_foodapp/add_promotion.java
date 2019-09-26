@@ -46,11 +46,11 @@ public class add_promotion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_promotion);
 
-       /* txtname = findViewById(R.id.textNamePromo);
+       txtname = findViewById(R.id.textNamePromo);
         txtdescription = (EditText) findViewById(R.id.textDescriptionPromo);
         imageview = (ImageView) findViewById(R.id.imagepromo);
         txtprice = findViewById(R.id.textPricePromo);
-        btnaddpromo = findViewById(R.id.addPromobtn);*/
+        btnaddpromo = findViewById(R.id.addPromobtn);
 
         productImageRef = FirebaseStorage.getInstance().getReference().child("AddPromotion");
         productRef = FirebaseDatabase.getInstance().getReference().child("AddPromotion");

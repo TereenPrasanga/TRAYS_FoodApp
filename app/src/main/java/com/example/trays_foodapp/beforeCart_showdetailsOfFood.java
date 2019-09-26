@@ -131,7 +131,7 @@ public class beforeCart_showdetailsOfFood extends AppCompatActivity {
 
                 startActivity(intent1);
 
-                Toast.makeText(beforeCart_showdetailsOfFood.this, "REDIRECT SUCCESSFULL"+counter+name+results, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(beforeCart_showdetailsOfFood.this, "REDIRECT SUCCESSFULL"+counter+name+results, Toast.LENGTH_SHORT).show();
 
 
 
