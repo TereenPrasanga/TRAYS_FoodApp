@@ -1,6 +1,5 @@
 <resources>
 
-
     <string name="app_name">TRAYS</string>
     <string name="srartBtn">GET START</string>
     <string name="signup">Sign Up</string>
@@ -48,8 +47,8 @@
     <string name="Vieworder"> View Orders</string>
     <string name="AddFood"> Add Foods</string>
     <string name="AddShopes">Add Shops</string>
-    <string name="RemoveUsers">Remove Users</string>
-    <string name="RemoveShops">Remove Shops</string>
+    <string name="RemoveUsers">Manage Users</string>
+    <string name="RemoveShops">Manage Shops</string>
     <string name="logout">Log out</string>
     <string name="edit_profile">Edit profile</string>
 
@@ -59,11 +58,11 @@
     <string name="showdetails_INCRE">+</string>
     <string name="showdetails_decre">-</string>
     <string name="showdetails_value">7</string>
-    <string name="showdetails_tot">Total Price = 4589.99 LKR</string>
+    <string name="showdetails_tot">Total Price  = LKR. </string>
     <string name="showdetails_ADDCART">Add to Cart</string>
     <string name="showdetails_description">Pieces of devilled beef complemented by fresh capsicums, onions and a double layer of mozzarella cheese.A fiery mix of prawns, devilled fish, olives, bell peppers and onions with a double layer of mozzarella cheese.</string>
     <string name="add_item">Add Item</string>
-    <string name="add_promotion_item">Add Promotion Item</string>
+    <string name="add_promotion_item">Add Promotion</string>
     <string name="add_image">Add Image</string>
 
 
@@ -115,7 +114,34 @@
     <string name="Open">Open</string>
     <string name="close">close</string>
     <string name="shops">shops</string>
-    <string name="delete">Delete</string>
-    <string name="search_shop">Search Shop name.....</string>
+    <string name="search_shop">Search Shop Name ....</string>
+
+    //
+
+
+    <string name="layout_foodname">Food Name</string>
+    <string name="layout_foodprice">LKR 160</string>
+
+    <string name="final_N">Cheeze Pizza - Crispy </string>
+    <string name="final_quantity">Quantity :</string>
+    <string name="final_Tot">Total Price :</string>
+    <string name="final_enter_username">Your Name :</string>
+    <string name="final_enter_username1"></string>
+    <string name="final_enter_contact">Contact No :</string>
+    <string name="final_enter_contact1"></string>
+    <string name="final_enter_placeAOredr">Place a Order</string>
+    <string name="final_enter_cancelOredr">Cancel a Order</string>
+    <string name="final_Q">7</string>
+    <string name="final_P">LKR 1200.00</string>
+    <string name="LKR">LKR</string>
+
+    <string name="order_cusname">Customer_name</string>
+    <string name="BuyNow">Buy Now</string>
+    <!--  <string name="BuyNow">Buy Now</string>
+    <string name="BuyNow">Buy Now</string>
+    <string name="BuyNow">Buy Now</string>&ndash;&gt;-->
+
+    <string name="SearchFoods">Search Foods Here...</string>
+
 
 </resources>

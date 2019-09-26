@@ -47,11 +47,11 @@ public class shop_register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_register);
 
-        txtname = findViewById(R.id.txtshopname);
-        txtlocation = findViewById(R.id.txtshoplocation);
+        txtname = (EditText) findViewById(R.id.txtshopname);
+        txtlocation = (EditText) findViewById(R.id.txtshoplocation);
         imageView = (ImageView) findViewById(R.id.imageShop);
-        txtemail = findViewById(R.id.txtshopemail);
-        txtphone = findViewById(R.id.txtshopphone);
+        txtemail = (EditText)findViewById(R.id.txtshopemail);
+        txtphone =(EditText) findViewById(R.id.txtshopphone);
         btnsignupShop = findViewById(R.id.btnsignUpShop);
 
         productImageRef = FirebaseStorage.getInstance().getReference().child("ShopRegistration");
@@ -74,6 +74,25 @@ public class shop_register extends AppCompatActivity {
 
 
     }
+
+    private void openGallary () {
+        Intent galleryIntent = new Intent();
+        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+        galleryIntent.setType("image/*");
+        startActivityForResult(galleryIntent, GaLLeryPick);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == GaLLeryPick && resultCode == RESULT_OK && data != null)
+        {
+            ImageUri = data.getData();
+            imageView.setImageURI(ImageUri);
+        }
+    }
+
 
     private void ValidateProductData() {
 
@@ -192,21 +211,7 @@ public class shop_register extends AppCompatActivity {
     }
 
 
-    private void openGallary () {
-            Intent galleryIntent = new Intent();
-            galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-            galleryIntent.setType("image/*");
-            startActivityForResult(galleryIntent, GaLLeryPick);
-        }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == GaLLeryPick && resultCode == RESULT_OK && data != null)
-        {
-            ImageUri = data.getData();
-            imageView.setImageURI(ImageUri);
-        }
-    }
+
 }

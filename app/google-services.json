@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1097891549745",
+    "firebase_url": "https://traysfoodappfinal-3e35f.firebaseio.com",
+    "project_id": "traysfoodappfinal-3e35f",
+    "storage_bucket": "traysfoodappfinal-3e35f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097891549745:android:2e2fb10e18f386c161bb10",
+        "android_client_info": {
+          "package_name": "com.example.trays_foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097891549745-m9dskolkvenokk8nfiq6qps7gvjsl2o1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trays_foodapp",
+            "certificate_hash": "88c22a4939493457a9c6b172f179b0efd262200f"
+          }
+        },
+        {
+          "client_id": "1097891549745-o7kk50066e40l7sicrsrn4haik2h43an.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoGWAwLGR6F4Wu2SBYML0Zrp9Hu-O858U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097891549745-o7kk50066e40l7sicrsrn4haik2h43an.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,6 +23,10 @@ public class admin extends AppCompatActivity {
         Intent intent = new Intent(this,add_item.class);
         startActivity(intent);
     }
+    public void add_promo(View view) {
+        Intent intent = new Intent(this,add_promotion.class);
+        startActivity(intent);
+    }
 
     public void managefoods(View view) {
         Intent intent = new Intent(this,manage_view_foods_list.class);
