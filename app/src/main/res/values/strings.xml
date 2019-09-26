@@ -58,7 +58,7 @@
     <string name="showdetails_INCRE">+</string>
     <string name="showdetails_decre">-</string>
     <string name="showdetails_value">7</string>
-    <string name="showdetails_tot">Total Price = 4589.99 LKR</string>
+    <string name="showdetails_tot">Total Price  = LKR. </string>
     <string name="showdetails_ADDCART">Add to Cart</string>
     <string name="showdetails_description">Pieces of devilled beef complemented by fresh capsicums, onions and a double layer of mozzarella cheese.A fiery mix of prawns, devilled fish, olives, bell peppers and onions with a double layer of mozzarella cheese.</string>
     <string name="add_item">Add Item</string>
@@ -133,6 +133,19 @@
     <string name="final_enter_cancelOredr">Cancel a Order</string>
     <string name="final_Q">7</string>
     <string name="final_P">LKR 1200.00</string>
+    <string name="LKR">LKR</string>
+
+    <string name="order_cusname">Customer_name</string>
+    <string name="BuyNow">Buy Now</string>
+  <!--  <string name="BuyNow">Buy Now</string>
+    <string name="BuyNow">Buy Now</string>
+    <string name="BuyNow">Buy Now</string>&ndash;&gt;-->
+
+    <string name="SearchFoods">Search Foods Here...</string>
+
+
+
+
 
 
 

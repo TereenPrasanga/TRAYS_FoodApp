@@ -88,7 +88,7 @@ public class SearchFoodsAdapter extends RecyclerView.Adapter<SearchFoodsAdapter.
     public void onBindViewHolder(@NonNull SearchFoodsViewHolder searchFoodsViewHolder, int i) {
 
         searchFoodsViewHolder.Name.setText(IList.get(i).getName());
-        searchFoodsViewHolder.Price.setText(IList.get(i).getPrice());
+        searchFoodsViewHolder.Price.setText("LKR.  "+IList.get(i).getPrice()+".00");
 
         Picasso.get().load(IList.get(i).getUrl())
                 .into(searchFoodsViewHolder.image);

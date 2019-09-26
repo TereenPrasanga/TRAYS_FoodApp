@@ -154,6 +154,7 @@ public class SearchBarFoodActivity extends AppCompatActivity implements SearchFo
                     }
 
 
+
                     if (counter == 15)
                         break;
 

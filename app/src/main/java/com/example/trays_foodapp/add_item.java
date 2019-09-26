@@ -61,7 +61,7 @@ public class add_item extends AppCompatActivity {
 
         addProduct = (Button)findViewById(R.id.b1);
         i = (ImageView)findViewById(R.id.imageView);
-        name = (EditText) findViewById(R.id.t1);
+        name = (EditText) findViewById(R.id.fname);
         price = (EditText) findViewById(R.id.t2);
         des = (EditText)findViewById(R.id.t3);
 

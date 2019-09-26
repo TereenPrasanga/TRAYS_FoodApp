@@ -191,6 +191,8 @@ public class PlaceAOrderFinalActivity extends AppCompatActivity {
         OrdersMap.put("time",saveCurrentTime);
 
         OrdersMap.put("pname",pname);
+        OrdersMap.put("uname",uname);
+
         OrdersMap.put("price",allprice);
         OrdersMap.put("contactno",con);
 

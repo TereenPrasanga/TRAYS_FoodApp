@@ -11,7 +11,7 @@
         android:id="@+id/search_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search Text..."
+        android:hint="@string/SearchFoods"
         android:layout_margin="10dp"/>
 
 
