@@ -2,6 +2,7 @@ package com.example.trays_foodapp;
 
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -51,6 +52,8 @@ public class add_item extends AppCompatActivity {
     private DatabaseReference productRef;
 
     private String downloadImageuRL,productRandomkEY;
+    ProgressDialog loadingbar;
+
 
     private static  final int GalleryPick = 1;
 
@@ -64,6 +67,7 @@ public class add_item extends AppCompatActivity {
         name = (EditText) findViewById(R.id.fname);
         price = (EditText) findViewById(R.id.t2);
         des = (EditText)findViewById(R.id.t3);
+        loadingbar = new ProgressDialog(this);
 
         ProductImageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
 
@@ -122,7 +126,8 @@ public class add_item extends AppCompatActivity {
 
         Pname = name.getText().toString();
 
-        Price = Integer.parseInt(price.getText().toString());
+
+        String price1 = price.getText().toString();
 
         Ddes = des.getText().toString();
 
@@ -135,8 +140,26 @@ public class add_item extends AppCompatActivity {
         {
             Toast.makeText(this, "Name is mandatory", Toast.LENGTH_SHORT).show();
         }
+
+        else if(TextUtils.isEmpty(price1))
+        {
+            Toast.makeText(this, "Price is mandatory", Toast.LENGTH_SHORT).show();
+        }
+
+        else if(TextUtils.isEmpty(Ddes))
+        {
+            Toast.makeText(this, "Description is mandatory", Toast.LENGTH_SHORT).show();
+        }
+
+
+
         else {
+            Price = Integer.parseInt(price.getText().toString());
             store();
+            loadingbar.setTitle("Processing");
+            loadingbar.setMessage("Please Wait");
+            loadingbar.setCanceledOnTouchOutside(false);
+            loadingbar.show();
         }
 
 
@@ -199,7 +222,7 @@ public class add_item extends AppCompatActivity {
                         {
                             downloadImageuRL = task.getResult().toString();
 
-                            Toast.makeText(add_item.this, "GOT THE product image URL SUCESSFULLY", Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(add_item.this, "GOT THE product image URL SUCESSFULLY", Toast.LENGTH_SHORT).show();
 
                             saveProductInfoDatabase();
 
@@ -235,10 +258,14 @@ public class add_item extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     Toast.makeText(add_item.this, "Product is added successfully", Toast.LENGTH_SHORT).show();
+                    loadingbar.dismiss();
+                    Intent intent = new Intent(getApplicationContext(),admin.class);
+                    startActivity(intent);
                 }
                 else{
                     String message = task.getException().toString();
                     Toast.makeText(add_item.this, "ERROR"+message, Toast.LENGTH_SHORT).show();
+                    loadingbar.dismiss();
                 }
             }
         });

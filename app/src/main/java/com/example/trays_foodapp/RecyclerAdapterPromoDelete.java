@@ -43,7 +43,7 @@ public class RecyclerAdapterPromoDelete extends RecyclerView.Adapter<RecyclerAda
     public void onBindViewHolder(@NonNull RecyclerAdapterPromoDelete.ViewHolderDeleteX viewHolderDelete, int i) {
 
         viewHolderDelete.pname.setText(imagesLists.get(i).getName());
-        viewHolderDelete.price.setText(imagesLists.get(i).getPrice());
+        viewHolderDelete.price.setText("LKR. "+imagesLists.get(i).getPrice()+".00");
 
         Picasso.get().load(imagesLists.get(i).getUrl())
                 .into(viewHolderDelete.imageView);
@@ -111,10 +111,10 @@ public class RecyclerAdapterPromoDelete extends RecyclerView.Adapter<RecyclerAda
 
 
             menu.setHeaderTitle("Select Action");
-            MenuItem doWhatever = menu.add(Menu.NONE,1,1,"Do whatever");
+          //  MenuItem doWhatever = menu.add(Menu.NONE,1,1,"Do whatever");
             MenuItem delete = menu.add(Menu.NONE,2,2,"Delete");
 
-            doWhatever.setOnMenuItemClickListener(this);
+          //  doWhatever.setOnMenuItemClickListener(this);
             delete.setOnMenuItemClickListener(this);
         }
 

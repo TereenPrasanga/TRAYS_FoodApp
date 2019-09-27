@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtshopname"
+        android:id="@+id/updateShopName"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
+        app:layout_constraintTop_toBottomOf="@+id/updateShopName" />
 
     <EditText
         android:id="@+id/txtshopemail"
@@ -109,17 +109,15 @@
         app:layout_constraintTop_toBottomOf="@+id/txtshopphone" />
 
     <Button
-        android:id="@+id/btnsignUp"
+        android:id="@+id/btnsignUpUser"
         android:layout_width="105dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/rounded_btn"
-        android:backgroundTint="@color/startBtn"
-        android:onClick="signup"
+        android:background="@drawable/shapebtn"
         android:text="@string/user_signupBtn"
-        android:textColor="#000000"
+        android:textColor="@color/Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

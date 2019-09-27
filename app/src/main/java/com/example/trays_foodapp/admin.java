@@ -15,7 +15,7 @@ public class admin extends AppCompatActivity {
 
 
     public void view_orders(View view) {
-        Intent intent = new Intent(this,orders_customer_view_list.class);
+        Intent intent = new Intent(this,OrdersViewFoodsActivity.class);
         startActivity(intent);
     }
 
@@ -29,12 +29,12 @@ public class admin extends AppCompatActivity {
     }
 
     public void managefoods(View view) {
-        Intent intent = new Intent(this,manage_view_foods_list.class);
+        Intent intent = new Intent(this,AdminFoodsDeleteUpdateActivity.class);
         startActivity(intent);
     }
 
     public void managepromo(View view) {
-        Intent intent = new Intent(this,manage_promotion_list.class);
+        Intent intent = new Intent(this,admin_promo_delete_update_Activity.class);
         startActivity(intent);
     }
 
@@ -44,17 +44,19 @@ public class admin extends AppCompatActivity {
     }
 
     public void removeshop(View view) {
-        Intent intent = new Intent(this,shop_delete_list.class);
+        Intent intent = new Intent(this,shop_update.class);
         startActivity(intent);
     }
 
-    public void removeuser(View view) {
-        Intent intent = new Intent(this,RegisterdUserList.class);
-        startActivity(intent);
-    }
+
 
     public void logout(View view) {
         Intent intent = new Intent(this,SignIn.class);
+        startActivity(intent);
+    }
+
+    public void ViewShops(View view) {
+        Intent intent = new Intent(this,ShowShops.class);
         startActivity(intent);
     }
 }

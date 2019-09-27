@@ -1,5 +1,6 @@
 package com.example.trays_foodapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -18,7 +19,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -30,188 +30,76 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 public class shop_register extends AppCompatActivity {
-    String downloadImageURi,productRandomKey;
-    String pname,plocation,pemail,ptelephone;
-    String saveCurrentDate,saveCurrentTime;
-    EditText txtname,txtlocation,txtemail,txtphone;
-    ImageView imageView;
-    Button btnsignupShop;
-    private static  final int GaLLeryPick = 1;
-    private Uri ImageUri;
 
-    private StorageReference productImageRef;
-    private DatabaseReference productRef;
+    EditText txtname,txtlocation,txtemail,txtphone,txtowner;
+    Button btnsignupShop;
+    DatabaseReference addRef;
+    ShopClass shop;
+
+
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_register);
 
-        txtname = (EditText) findViewById(R.id.txtshopname);
-        txtlocation = (EditText) findViewById(R.id.txtshoplocation);
-        imageView = (ImageView) findViewById(R.id.imageShop);
-        txtemail = (EditText)findViewById(R.id.txtshopemail);
-        txtphone =(EditText) findViewById(R.id.txtshopphone);
+        txtname = findViewById(R.id.updateShopName);
+        txtlocation = findViewById(R.id.updateShopAddress);
+        txtemail = findViewById(R.id.updateShopEmail);
+        txtphone = findViewById(R.id.updateShopPhone);
+        txtowner = findViewById(R.id.insertShopOwnername);
         btnsignupShop = findViewById(R.id.btnsignUpShop);
 
-        productImageRef = FirebaseStorage.getInstance().getReference().child("ShopRegistration");
-        productRef = FirebaseDatabase.getInstance().getReference().child("ShopRegistration");
-
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGallary();
-            }
-        });
+        shop = new ShopClass();
         btnsignupShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ValidateProductData();
-                Intent intent = new Intent(getApplicationContext(),admin.class);
-                startActivity(intent);
-            }
-        });
+                addRef = FirebaseDatabase.getInstance().getReference().child("Shops");
 
+                try {
 
-    }
-
-    private void openGallary () {
-        Intent galleryIntent = new Intent();
-        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-        galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent, GaLLeryPick);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == GaLLeryPick && resultCode == RESULT_OK && data != null)
-        {
-            ImageUri = data.getData();
-            imageView.setImageURI(ImageUri);
-        }
-    }
-
-
-    private void ValidateProductData() {
-
-        pname = txtname.getText().toString();
-        plocation = txtlocation.getText().toString();
-        pemail = txtemail.getText().toString();
-        ptelephone = txtphone.getText().toString();
-
-        if(ImageUri.equals(null)) //c
-        {
-            Toast.makeText(this, "Image is Mandatory", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(pname)) {
-            Toast.makeText(this, "Shop Name Required!", Toast.LENGTH_SHORT).show();
-        }else if (TextUtils.isEmpty(plocation))
-        {
-            Toast.makeText(this, "Location Required!", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(pemail))
-        {
-            Toast.makeText(this, "email Required!", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(ptelephone))
-        {
-            Toast.makeText(this, "Telephone Number Required!", Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            Store();
-        }
-
-
-    }
-
-    private void Store() {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        saveCurrentDate  = currentDate.format(calendar.getTime());
-
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calendar.getTime());
-
-        productRandomKey = saveCurrentDate + saveCurrentTime;
-
-        final StorageReference filepath = productImageRef.child(ImageUri.getLastPathSegment()+productRandomKey+".jpg");
-        final UploadTask uploadTask = filepath.putFile(ImageUri);
-
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                String message = e.toString();
-                Toast.makeText(shop_register.this, "error"+message, Toast.LENGTH_SHORT).show();
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(shop_register.this, "Image Upload Successfully", Toast.LENGTH_SHORT).show();
-                Task<Uri> uriTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                    @Override
-                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                        if (!task.isSuccessful())
-                        {
-                            throw  task.getException();
-                        }
-                        downloadImageURi = filepath.getDownloadUrl().toString();
-                        return filepath.getDownloadUrl();
+                    if (TextUtils.isEmpty(txtname.getText().toString()))
+                    {
+                        Toast.makeText(shop_register.this, "Please Enter Name", Toast.LENGTH_SHORT).show();
+                    }else if (TextUtils.isEmpty(txtlocation.getText().toString()))
+                    {
+                        Toast.makeText(shop_register.this, "Please Enter address", Toast.LENGTH_SHORT).show();
+                    }else if (TextUtils.isEmpty(txtemail.getText().toString()))
+                    {
+                        Toast.makeText(shop_register.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtphone.getText().toString()))
+                    {
+                        Toast.makeText(shop_register.this, "Please Enter Phone", Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(txtowner.getText().toString()))
+                    {
+                        Toast.makeText(shop_register.this, "Please Enter Owner Name", Toast.LENGTH_SHORT).show();
                     }
-                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task) {
-                        if (task.isSuccessful())
-                        {
-                            downloadImageURi = task.getResult().toString();
-                            Toast.makeText(shop_register.this, "Got the image URI successfully", Toast.LENGTH_SHORT).show();
-
-                            saveProductInfoDatabase();
-                        }
+                    else if((txtphone.getText().toString()).length() != 10)
+                    {
+                        Toast.makeText(shop_register.this, "Number Should be 10 Digits", Toast.LENGTH_SHORT).show();
                     }
-                });
+                    else
+                    {
+                        shop.setName(txtname.getText().toString().trim());
+                        shop.setEmail(txtemail.getText().toString().trim());
+                        shop.setLocation(txtlocation.getText().toString().trim());
+                        shop.setTelephone(txtphone.getText().toString().trim());
+                        shop.setOwner(txtowner.getText().toString().trim());
+                        addRef.child(txtphone.getText().toString().trim()).setValue(shop);
+                        Intent intent = new Intent(shop_register.this,admin.class);
+                        startActivity(intent);
+                        Toast.makeText(shop_register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-            }
+                    }
 
-
-        });
-
-
-
-
-    }
-
-    private void saveProductInfoDatabase() {
-        HashMap<String ,Object> productMap = new HashMap<>();
-        productMap.put("pid",productRandomKey);
-        productMap.put("date",saveCurrentDate);
-        productMap.put("time",saveCurrentTime);
-        productMap.put("name",pname);
-        productMap.put("location",plocation);
-        productMap.put("email",pemail);
-        productMap.put("telephone",ptelephone);
-        productMap.put("image",downloadImageURi);
-
-        productRef.child(productRandomKey).updateChildren(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful())
+                }catch (NumberFormatException e)
                 {
-                    Toast.makeText(shop_register.this, "Added Succesfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(shop_register.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
                 }
-                else
-                {
-                  String msg = task.getException().toString();
-                    Toast.makeText(shop_register.this, "ERROR"+msg, Toast.LENGTH_SHORT).show();
 
-                }
             }
         });
 
     }
-
-
-
-
-
 }

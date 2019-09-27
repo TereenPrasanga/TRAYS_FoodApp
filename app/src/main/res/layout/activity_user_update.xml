@@ -7,12 +7,13 @@
     tools:context=".user_update"
     android:background="@drawable/signup">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="180dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:backgroundTint="@color/startBtn"
@@ -26,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtshopname"
+        android:id="@+id/updateShopName"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -42,11 +43,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtshoplocation"
+        android:id="@+id/updateShopAddress"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
@@ -56,14 +57,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
+        app:layout_constraintTop_toBottomOf="@+id/updateShopName" />
 
     <EditText
-        android:id="@+id/txtshopemail"
+        android:id="@+id/updateShopEmail"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
@@ -73,55 +74,81 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtshoplocation" />
+        app:layout_constraintTop_toBottomOf="@+id/updateShopAddress" />
 
     <EditText
-        android:id="@+id/txtshopphone"
-        android:layout_width="290dp"
+        android:id="@+id/updateShopPhone"
+        android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="188dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
         android:hint="@string/customer_telephone"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtshopemail" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/txtshoppassword"
+        android:id="@+id/updateUserPassword"
         android:layout_width="290dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
         android:hint="@string/customer_password"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtshopphone" />
+        app:layout_constraintTop_toBottomOf="@+id/updateShopEmail" />
 
     <Button
-        android:id="@+id/btnsignUp"
+        android:id="@+id/btnUpdateUser"
         android:layout_width="105dp"
         android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/rounded_btn"
-        android:backgroundTint="@color/startBtn"
-        android:onClick="update"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/shapebtn"
         android:text="@string/update"
-        android:textColor="#000000"
+        android:textColor="@color/Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btndeleteUser" />
+
+    <Button
+        android:id="@+id/btndeleteUser"
+        android:layout_width="105dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/shapebtn"
+        android:text="@string/deleteBtn"
+        android:textColor="@color/Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdateUser"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnsearchUser"
+        android:layout_width="105dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/shapebtn"
+        android:text="@string/serach"
+        android:textColor="@color/Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </android.support.constraint.ConstraintLayout>

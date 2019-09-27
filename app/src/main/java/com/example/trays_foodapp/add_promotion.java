@@ -1,5 +1,6 @@
 package com.example.trays_foodapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -30,11 +31,14 @@ import java.util.HashMap;
 
 public class add_promotion extends AppCompatActivity {
     String downloadImageURi,productRandomKey;
-    String pname,pdescription,pprice;
+    String pname,pdescription;
+    int pprice;
     String saveCurrentDate,saveCurrentTime;
     EditText txtname,txtdescription,txtprice;
     ImageView imageview;
     Button btnaddpromo;
+    ProgressDialog loadingbar;
+
     private static  final int GaLLeryPick = 1;
     private Uri ImageUri;
 
@@ -51,6 +55,7 @@ public class add_promotion extends AppCompatActivity {
         imageview = (ImageView) findViewById(R.id.imagepromo);
         txtprice = findViewById(R.id.textPricePromo);
         btnaddpromo = findViewById(R.id.addPromobtn);
+        loadingbar = new ProgressDialog(this);
 
         productImageRef = FirebaseStorage.getInstance().getReference().child("AddPromotion");
         productRef = FirebaseDatabase.getInstance().getReference().child("AddPromotion");
@@ -65,8 +70,7 @@ public class add_promotion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ValidateProductData();
-                Intent intent = new Intent(getApplicationContext(), admin.class);
-                startActivity(intent);
+
             }
         });
     }
@@ -75,27 +79,30 @@ public class add_promotion extends AppCompatActivity {
 
             pname = txtname.getText().toString();
             pdescription = txtdescription.getText().toString();
-            pprice = txtprice.getText().toString();
+           String pprice1 = txtprice.getText().toString();
 
-            if(ImageUri.equals(null)) //c
+            if(ImageUri == null) //c
             {
                 Toast.makeText(this, "Image is Mandatory", Toast.LENGTH_SHORT).show();
             }
-            else if (TextUtils.isEmpty(pname)) {
-                Toast.makeText(this, "Shop Name Required!", Toast.LENGTH_SHORT).show();
-            }else if (TextUtils.isEmpty(pname))
+            else if (TextUtils.isEmpty(pname))
             {
-                Toast.makeText(this, "Location Required!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Name Required!", Toast.LENGTH_SHORT).show();
             } else if (TextUtils.isEmpty(pdescription))
             {
-                Toast.makeText(this, "email Required!", Toast.LENGTH_SHORT).show();
-            } else if (TextUtils.isEmpty(pprice))
+                Toast.makeText(this, "Description Required!", Toast.LENGTH_SHORT).show();
+            } else if (TextUtils.isEmpty(pprice1))
             {
-                Toast.makeText(this, "Telephone Number Required!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Price Required!", Toast.LENGTH_SHORT).show();
             }
             else
             {
+                pprice = Integer.parseInt(pprice1);
                 Store();
+                loadingbar.setTitle("Processing");
+                loadingbar.setMessage("Please Wait");
+                loadingbar.setCanceledOnTouchOutside(false);
+                loadingbar.show();
             }
 
 
@@ -139,7 +146,7 @@ public class add_promotion extends AppCompatActivity {
                             if (task.isSuccessful())
                             {
                                 downloadImageURi = task.getResult().toString();
-                                Toast.makeText(add_promotion.this, "Got the image URI successfully", Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(add_promotion.this, "Got the image URI successfully", Toast.LENGTH_SHORT).show();
 
                                 saveProductInfoDatabase();
                             }
@@ -171,11 +178,15 @@ public class add_promotion extends AppCompatActivity {
                     if (task.isSuccessful())
                     {
                         Toast.makeText(add_promotion.this, "Added Succesfully!", Toast.LENGTH_SHORT).show();
+                        loadingbar.dismiss();
+                        Intent intent = new Intent(getApplicationContext(), admin.class);
+                        startActivity(intent);
                     }
                     else
                     {
                         String msg = task.getException().toString();
                         Toast.makeText(add_promotion.this, "ERROR"+msg, Toast.LENGTH_SHORT).show();
+                        loadingbar.dismiss();
 
                     }
                 }

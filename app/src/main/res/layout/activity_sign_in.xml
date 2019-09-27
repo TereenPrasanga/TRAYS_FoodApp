@@ -8,15 +8,10 @@
     android:orientation="vertical"
     android:background="@drawable/login"
     android:padding="30dp"
-    tools:context=".SignIn"><![CDATA[
-
-
-  />
-
-  ]]>
+    tools:context=".SignIn">
 
   <EditText
-      android:id="@+id/txtshopname"
+      android:id="@+id/updateShopName"
       android:layout_width="290dp"
       android:layout_height="45dp"
       android:layout_marginStart="30dp"
@@ -24,8 +19,8 @@
       android:layout_marginEnd="30dp"
       android:background="@drawable/rounded_shape"
       android:ems="10"
-      android:hint="@string/username"
-      android:inputType="textPersonName"
+      android:hint="@string/shop_telephone"
+      android:inputType="number"
       android:textAlignment="center"
       android:textSize="24sp"
       app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +47,7 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
-      android:id="@+id/editText"
+      android:id="@+id/loginpassword"
       android:layout_width="290dp"
       android:layout_height="45dp"
       android:layout_marginStart="30dp"
@@ -67,58 +62,27 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.508"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/txtshopname" />
+      app:layout_constraintTop_toBottomOf="@+id/updateShopName" />
 
   <Button
-      android:id="@+id/btnsignUp"
+      android:id="@+id/btnsignUpUser"
       android:layout_width="108dp"
       android:layout_height="48dp"
       android:layout_marginStart="132dp"
       android:layout_marginTop="43dp"
       android:layout_marginEnd="132dp"
       android:background="@drawable/shapebtn"
-      android:onClick="login"
       android:text="@string/loginbtn"
-      android:textColor="@color/Home"
       android:textAlignment="center"
+      android:textColor="@color/Home"
       android:textSize="18sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editText" />
+      app:layout_constraintTop_toBottomOf="@+id/loginpassword" /><![CDATA[
 
-  <Button
-      android:id="@+id/button3"
-      android:layout_width="122dp"
-      android:layout_height="63dp"
-      android:layout_marginStart="60dp"
-      android:layout_marginEnd="39dp"
-      android:layout_marginBottom="16dp"
-      android:background="@drawable/rounded_btn"
-      android:onClick="adminLogin"
-      android:text="@string/admin"
-      android:textAlignment="center"
-      android:textSize="18sp"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/button4"
-      app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="115dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/rounded_btn"
-        android:onClick="shopAdmin"
-        android:text="@string/shop"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3" />" />
+  " />
 
 
+]]>
 </android.support.constraint.ConstraintLayout>

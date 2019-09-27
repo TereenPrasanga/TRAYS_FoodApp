@@ -142,6 +142,10 @@
     <string name="BuyNow">Buy Now</string>&ndash;&gt;-->
 
     <string name="SearchFoods">Search Foods Here...</string>
+    <string name="owner">Shop Owner</string>
+    <string name="allshops">View shops</string>
+    <string name="search_promo">Search Promo</string>
+    <string name="search_foods">Search Foods</string>
 
 
 </resources>

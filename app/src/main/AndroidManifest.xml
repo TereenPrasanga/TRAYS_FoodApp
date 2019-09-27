@@ -9,28 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin_promo_delete_update_Activity">
-
-        </activity>
-        <activity android:name=".Final_promo_Activity">
-
-        </activity>
-        <activity android:name=".OrdersViewFoodsActivity" >
-
+        <activity android:name=".ShowShops" android:parentActivityName=".admin"></activity>
+        <activity android:name=".add_item" android:parentActivityName=".admin"/>
+        <activity android:name=".admin_promo_delete_update_Activity" android:parentActivityName=".admin"></activity>
+        <activity android:name=".Final_promo_Activity" android:parentActivityName=".home"></activity>
+        <activity android:name=".OrdersViewFoodsActivity" android:parentActivityName=".admin"></activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".FinalRicesActivity"  android:parentActivityName=".home"/>
+        <activity android:name=".FinalKottuActivity" android:parentActivityName=".home"/>
+        <activity android:name=".FinalDrinksActivity" android:parentActivityName=".home"/>
+        <activity android:name=".FinalFoodsActivity" android:parentActivityName=".home"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FinalRicesActivity" />
-        <activity android:name=".FinalKottuActivity" />
-        <activity android:name=".FinalDrinksActivity" />
-        <activity android:name=".FinalFoodsActivity" >
-
-
-        </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".user_update" android:parentActivityName=".home"/>
         <activity
             android:name=".search_bar"
             android:parentActivityName=".home" />
@@ -40,7 +36,6 @@
         <activity
             android:name=".promotion_update"
             android:parentActivityName=".manage_promotion_list" />
-        <activity android:name=".shop_update" />
         <activity
             android:name=".food_update"
             android:parentActivityName=".manage_view_foods_list" />
@@ -52,15 +47,8 @@
             android:name=".promotion_list"
             android:parentActivityName=".home" />
         <activity
-            android:name=".RegisterdUserList"
-            android:parentActivityName=".admin" />
-        <activity android:name=".SignIn" />
-        <activity
             android:name=".shopView_list"
             android:parentActivityName=".home" />
-        <activity
-            android:name=".shop_register"
-            android:parentActivityName=".admin" />
         <activity android:name=".user_registration" />
         <activity
             android:name=".home"
@@ -68,14 +56,7 @@
         <activity
             android:name=".orders_customer_view_list"
             android:parentActivityName=".admin" />
-        <activity
-            android:name=".add_item"
-            android:parentActivityName=".admin" >
 
-
-
-
-        </activity>
         <activity
             android:name=".manage_view_foods_list"
             android:parentActivityName=".admin" />
@@ -89,30 +70,19 @@
             android:parentActivityName=".home" />
         <activity
             android:name=".pizza_view_list"
-            android:parentActivityName=".home" >
-
-
-        </activity>
+            android:parentActivityName=".home"></activity>
         <activity
             android:name=".rice_view_list"
             android:parentActivityName=".home" />
         <activity
             android:name=".add_promotion"
-            android:parentActivityName=".home">
-
-
-        </activity>
-        <activity
-            android:name=".user_update"
-            android:parentActivityName=".home" />
+            android:parentActivityName=".admin"></activity>
+        <activity android:name=".shop_register" android:parentActivityName=".admin"/>
         <activity android:name=".PlaceAOrderFinalActivity" />
-        <activity android:name=".SearchBarFoodActivity" >
-
-
-
-        </activity>
-        <activity android:name=".SearchbarPromotionActivity" />
-        <activity android:name=".AdminFoodsDeleteUpdateActivity"></activity>
+        <activity android:name=".SearchBarFoodActivity"  android:parentActivityName=".home"/>
+        <activity android:name=".shop_update" android:parentActivityName=".admin"/>
+        <activity android:name=".SearchbarPromotionActivity" android:parentActivityName=".home"/>
+        <activity android:name=".AdminFoodsDeleteUpdateActivity" android:parentActivityName=".admin"/>
     </application>
 
 </manifest>

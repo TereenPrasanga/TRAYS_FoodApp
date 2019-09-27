@@ -104,7 +104,7 @@ public class PlaceAOrderFinalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent1 = new Intent(PlaceAOrderFinalActivity.this,SearchBarFoodActivity.class);
+                Intent intent1 = new Intent(PlaceAOrderFinalActivity.this,home.class);
 
                 startActivity(intent1);
             }
@@ -204,9 +204,9 @@ public class PlaceAOrderFinalActivity extends AppCompatActivity {
 
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(PlaceAOrderFinalActivity.this, "Product is added successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PlaceAOrderFinalActivity.this, "Ordered successfully", Toast.LENGTH_SHORT).show();
 
-                    Intent intent1 = new Intent(PlaceAOrderFinalActivity.this,SearchBarFoodActivity.class);
+                    Intent intent1 = new Intent(PlaceAOrderFinalActivity.this,home.class);
 
                     startActivity(intent1);
                 }

@@ -153,7 +153,7 @@ RecyclerAdapterItemsDelete.OnItemClickListnerX{
 
     @Override
     public void onItemClickX(int position) {
-        Toast.makeText(this, "Normal click at position"+position, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Normal click at position"+position, Toast.LENGTH_SHORT).show();
 
     }
 

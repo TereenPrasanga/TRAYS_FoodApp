@@ -23,13 +23,13 @@ public class user_registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
-        txtname = findViewById(R.id.txtshopname);
+        txtname = findViewById(R.id.updateShopName);
         txtaddress = findViewById(R.id.txtshopemail);
         txtphone = findViewById(R.id.txtshopphone);
         txtemail = findViewById(R.id.txtshoplocation);
         txtpassword = findViewById(R.id.txtshoppassword);
 
-        btnsignup = findViewById(R.id.btnsignUp);
+        btnsignup = findViewById(R.id.btnsignUpUser);
         user = new user_registrationClass();
 
         btnsignup.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,11 @@ public class user_registration extends AppCompatActivity {
                     } else if (TextUtils.isEmpty(txtphone.getText().toString()))
                     {
                         Toast.makeText(user_registration.this, "Please Enter Phone", Toast.LENGTH_SHORT).show();
-                    } else if (TextUtils.isEmpty(txtpassword.getText().toString()))
+                    }
+                    else if (txtphone.getText().toString().length() != 10)
+                    {
+                        Toast.makeText(user_registration.this, "Number Should be 10 digits!", Toast.LENGTH_SHORT).show();
+                    }else if (TextUtils.isEmpty(txtpassword.getText().toString()))
                     {
                         Toast.makeText(user_registration.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
                     }else
@@ -58,7 +62,7 @@ public class user_registration extends AppCompatActivity {
                         user.setName(txtname.getText().toString().trim());
                         user.setEmail(txtemail.getText().toString().trim());
                         user.setAddress(txtaddress.getText().toString().trim());
-                        user.setPhone(Integer.parseInt(txtphone.getText().toString().trim()));
+                        user.setPhone(txtphone.getText().toString().trim());
                         user.setPassword(txtpassword.getText().toString().trim());
 
                         addRef.child(txtphone.getText().toString().trim()).setValue(user);

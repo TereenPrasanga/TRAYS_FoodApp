@@ -1,6 +1,7 @@
 package com.example.trays_foodapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,7 +20,12 @@ public class RecyclerPromoFinalAdapter extends RecyclerView.Adapter<RecyclerProm
 
     OnPromoClickFinalListner mListner;
 
-    public interface OnPromoClickFinalListner{   // interface
+    public interface OnPromoClickFinalListner{
+
+
+
+
+        // interface
         void onPromoClick(int position);
     }
     public void setOnPromoClickFinalListner(OnPromoClickFinalListner listner){  //setter for interface attribute

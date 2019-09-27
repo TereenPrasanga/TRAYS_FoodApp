@@ -5,7 +5,7 @@ public class user_registrationClass {
     private String email;
     private String password;
     private String address;
-    private int phone;
+    private String phone;
 
     public String getName() {
         return name;
@@ -39,14 +39,22 @@ public class user_registrationClass {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
     public user_registrationClass() {
+    }
+
+    public user_registrationClass(String name, String email, String password, String address, String phone) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.phone = phone;
     }
 }

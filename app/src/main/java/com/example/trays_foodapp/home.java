@@ -51,7 +51,7 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
     {
        if(menuItem.getItemId() == R.id.promo)
        {
-           Intent intent = new Intent(getApplicationContext(),promotion_list.class);
+           Intent intent = new Intent(getApplicationContext(),Final_promo_Activity.class);
            startActivity(intent);
 
        }
@@ -62,12 +62,12 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         }
          if(menuItem.getItemId() == R.id.search)
         {
-            Intent intent = new Intent(getApplicationContext(),search_bar.class);
+            Intent intent = new Intent(getApplicationContext(),SearchBarFoodActivity.class);
             startActivity(intent);
         }
         if(menuItem.getItemId() == R.id.shop)
         {
-            Intent intent = new Intent(getApplicationContext(),shopView_list.class);
+            Intent intent = new Intent(getApplicationContext(),SearchbarPromotionActivity.class);
             startActivity(intent);
         }
          if(menuItem.getItemId() == R.id.profile)
@@ -86,23 +86,23 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
 
     public void juicelist(View view) {
 
-        Intent intent = new Intent(this,juice_view_list.class);
+        Intent intent = new Intent(this,FinalDrinksActivity.class);
         startActivity(intent);
     }
 
     public void kottuorder(View view) {
-        Intent intent = new Intent(this,Kottu_view_list.class);
+        Intent intent = new Intent(this,FinalKottuActivity.class);
         startActivity(intent);
     }
 
     public void pizzaorder(View view) {
-        Intent intent = new Intent(this,pizza_view_list.class);
+        Intent intent = new Intent(this,FinalFoodsActivity.class);
         startActivity(intent);
     }
 
 
     public void riceorder(View view) {
-        Intent intent = new Intent(this,rice_view_list.class);
+        Intent intent = new Intent(this,FinalRicesActivity.class);
         startActivity(intent);
     }
 }
